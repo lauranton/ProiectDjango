@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+Body {
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: white;
+}
+button { 
+       background-color: #4CAF50; 
+       width: 100%;
+        color: orange; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+ form { 
+        border: 3px solid #f1f1f1; 
+    } 
+ input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid green; 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.7; 
+    }
+   
+ .container {
+        align: center;
+        padding: 30px;
+       background-color: white;
+
+    } 
+</style> 
+</head>  
+<body>  
+
+    <form>
+        <div class="container"><br>
+            <label>Username</label>
+    <input name="username" type="text" placeholder="Enter Username"><br>
+    <label>Password</label>
+    <input name="password" type="password" placeholder="Enter Password"><br>
+
+    <button type="submit" class="btn btn-info">Login</button><br>
+    <span style="color: red">{{ form.non_field_errors }}</span>
+
+           
+        </div> 
+    </form>   
+</body>   
+
+
+     </form>
+{% endblock %} endblock %}
